@@ -1,0 +1,32 @@
+* html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "fontMain", sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 19px;
+  font-weight: 400;
+}
+
+.bg-main {
+   background-color: #2A213F;
+}
+
+.bg-welcome {
+  background-image: url("./assets/img/hero.png");
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+   font-family: 'LittleMario';
+   src: url("../src/assets/font/LittleMalio.ttf");
+}
