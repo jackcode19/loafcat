@@ -2,9 +2,11 @@ import React from 'react'
 import Layout from '../../components/layout/Layout'
 import Card from '../../components/card/Card';
 import Slider from 'react-slick';
+import Hero from '../../assets/img/hero.png'
 
 import "../../../node_modules/slick-carousel/slick/slick.css"
 import "../../../node_modules/slick-carousel/slick/slick-theme.css"
+
 
 
 // import { ReactComponent as WalletIcon } from '../../assets/icons/phantom.svg'; // ensure you have this svg
@@ -29,12 +31,7 @@ function Home() {
          text: 'GET BACK TO WORK',
       },
       {
-         src: '/img/portfolio/porto1.png',
-         alt: 'Meme 1',
-         text: 'GET BACK TO WORK',
-      },
-      {
-         src: '/img/portfolio/porto1.png',
+         src: '/img/portfolio/porto2.png',
          alt: 'Meme 1',
          text: 'GET BACK TO WORK',
       },
@@ -95,9 +92,13 @@ function Home() {
   return (
    <Layout>  
       {/* Hero */}
-      <section className="bg-welcome bg-center bg-no-repeat bg-cover pb-32"> 
+        {/* <section className="bg-welcome bg-center bg-no-repeat bg-cover pb-32"> */}
+      <section className="relative w-full pb-32">
+
+         <img src={Hero} alt="" className='h-screen w-full' />
+           
          {/* Content */}
-         <div className=" w-full h-screen flex flex-col justify-center items-center">
+         <div className="absolute top-0 w-full h-screen flex flex-col justify-center items-center">
             <div className="">
                <h1 className="font-bold text-7xl sm:text-9xl lg:text-10xl text-slate-100 text-center font-pixelF font-outline-2 xl:font-outline-4 drop-shadow-2xl font-fontMain">
                   Welcome
@@ -212,7 +213,7 @@ function Home() {
          </div>
          
          {/* Content Box */}
-         <div className="border-[11px] border-secondary inline-block md:flex md:justify-between py-10">
+         <div className="border-[11px] border-secondary inline-block md:flex md:justify-between py-16">
                
             <div class="md:grid grid-rows-1 md:grid-flow-col gap-0 -translate-y-7 pr-6">
                <div class="row-span-3 flex justify-center items-center md:translate-x-10">
@@ -351,22 +352,21 @@ function Home() {
       
         
       <section className=" text-white py-12 px-6">
-         <div className="container mx-auto">
+         <div className="container max-w-7xl mx-auto">
 
          {/* Meme Slider */}
          <Slider {...settings} className="">
             {portfolio.map((meme, index) => (
                <div key={index} className="p-4">
-               <div className="border-[11px] border-secondary  overflow-hidden p-6">
+               <div className="border-[11px] border-secondary  overflow-hidden p-10 lg:p-20">
                   <div className="p-2 text-left mb-6">
                      <h2 className="text-xl md:text-4xl font-bold">{meme.text}</h2>
                   </div>
                   <img
                      src={meme.src}
                      alt={meme.alt}
-                     className="w-full h-auto object-cover"
+                     className="w-full h-[200px] lg:h-[35rem]"
                   />
-                  
                </div>
                </div>
             ))}
