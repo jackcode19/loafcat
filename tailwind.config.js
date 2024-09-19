@@ -14,6 +14,12 @@ export default {
         fontCat: ["LittleMario"],
       },
     },
+    container: {
+      center: true,
+      padding: {
+        DEFAULT: '1rem',
+      },
+    },
   },
   plugins: [],
 }

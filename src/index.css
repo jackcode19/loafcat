@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: "fontMain", sans-serif;
+  font-family: "mario", sans-serif;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -25,8 +25,15 @@ body {
 @tailwind components;
 @tailwind utilities;
 
-
 @font-face {
-   font-family: 'LittleMario';
-   src: url("../src/assets/font/LittleMalio.ttf");
-}
+   font-family: 'mario';
+   src: url("../src/assets/font/LittleMalio.TTF");
+  }
+
+
+/* @layer base {
+  @font-face {
+   font-family: 'mario';
+   src: url("../src/assets/font/LittleMalio.ttf") format("ttf");
+  }
+} */

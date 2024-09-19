@@ -16,7 +16,7 @@ import "../../../node_modules/slick-carousel/slick/slick-theme.css"
 import loafcat from '../../assets/img/loafcat.png'
 import loafcatRight from '../../assets/img/loafcat-right.png'
 import comic1 from '../../assets/img/comic1.png'
-import comic2 from '../../assets/img/comic2.png'
+import arrow from '../../assets/img/arrow.svg'
 
 function Home() {
    const handleCopy = () => {
@@ -95,12 +95,12 @@ function Home() {
         {/* <section className="bg-welcome bg-center bg-no-repeat bg-cover pb-32"> */}
       <section className="relative w-full pb-32">
 
-         <img src={Hero} alt="" className='h-screen w-full' />
+         <img src={Hero} alt="" className='h-auto md:h-screen w-full' />
            
          {/* Content */}
-         <div className="absolute top-0 w-full h-screen flex flex-col justify-center items-center">
+         <div className="absolute top-0 w-full h-2/3 md:h-screen flex flex-col justify-center items-center">
             <div className="">
-               <h1 className="font-bold text-7xl sm:text-9xl lg:text-10xl text-slate-100 text-center font-pixelF font-outline-2 xl:font-outline-4 drop-shadow-2xl font-fontMain">
+               <h1 className="font-bold text-6xl md:text-8xl text-slate-100 text-center font-pixelF font-outline-2 xl:font-outline-4 drop-shadow-2xl font-fontMain">
                   Welcome
                </h1>
             </div>
@@ -209,11 +209,12 @@ function Home() {
          >
             LoafdJ3iWSAvstx3zppSGKA6sRvL9GzRtU1iRV7HkLkm
          </p>
-         <span className="absolute top-0 right-0 text-xs text-gray-400 transform rotate-12">Click to copy!</span>
+            <img src={arrow} className='absolute top-0 right-0 translate-x-24 -translate-y-10'  alt="" />
+            <span className="absolute top-0 right-0 translate-x-36 -translate-y-16 text-md text-gray-400 transform rotate-12">Click to copy!</span>
          </div>
          
          {/* Content Box */}
-         <div className="border-[11px] border-secondary inline-block md:flex md:justify-between py-16">
+         <div className="border-[10px] border-secondary md:border-[11px] inline-block md:flex md:justify-between py-16">
                
             <div class="md:grid grid-rows-1 md:grid-flow-col gap-0 -translate-y-7 pr-6">
                <div class="row-span-3 flex justify-center items-center md:translate-x-10">
@@ -249,18 +250,18 @@ function Home() {
       {/* Ho To Buy */}
       <section className=" text-white py-20 px-6 md:px-12 lg:px-32">
          {/* Cards Container */}
-         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+         <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-4">
                
             {/* Section Title */}
-            <div className="text-center mb-10 w-1/2 mx-auto flex flex-col justify-center py-6">
-               <h2 className="text-6xl font-bold uppercase tracking-widest">
+            <div className="text-center mb-10 w-full  md:w-1/2 mx-auto flex flex-col justify-center py-6">
+               <h2 className="text-4xl md:text-6xl font-bold uppercase tracking-widest">
                   How To Buy
                </h2>
                <p className="text-yellow-400 mt-2 text-sm">Confused? Check detailed guide <a href="#" className="underline">here</a></p>
             </div>
                
             {/* Card 1: Get a Wallet */}
-            <div className="border-[13px] border-secondary py-6 md:py-16 text-center flex flex-col justify-center">
+            <div className="border-[11px] border-secondary md:border-[13px] py-6 md:py-16 text-center flex flex-col justify-center">
                <img src="/img/buy/phantom.png" alt="Get a wallet" className="mx-auto w-[150px] h-[120px] mb-16" />
                <div className="">
                   <h3 className="text-2xl font-bold">Get a wallet</h3>
@@ -269,14 +270,14 @@ function Home() {
             </div>
 
             {/* Card 2: Get $SOL */}
-            <div className="flex flex-col justify-center border-[13px] border-secondary p-6 md:py-16 text-center">
+            <div className="border-[11px] border-secondary md:border-[13px] flex flex-col justify-center  p-6 md:py-16 text-center">
                <img src="/img/buy/sol.png" alt="Get $SOL" className="mx-auto w-[150px] h-[120px] mb-16" />
                <h3 className="text-2xl font-bold">Get $SOL</h3>
                <p className="mt-2 text-yellow-400">Now buy some sol!</p>
             </div>
 
             {/* Card 3: Exchange $SOL to $LOAFCAT */}
-            <div className="flex flex-col justify-center border-[13px] border-secondary p-6 md:py-16 text-center">
+            <div className="border-[11px] border-secondary md:border-[13px] flex flex-col justify-center  p-6 md:py-16 text-center">
                <img src="/img/buy/phantom.png" alt="SOL to Loafcat" className="mx-auto w-[150px] h-[120px] mb-16" />
                <h3 className="text-2xl font-bold">$SOL to $LOAFCAT</h3>
                <p className="mt-2 text-yellow-400">Exchange your $SOL to $LOAFCAT</p>
@@ -293,7 +294,7 @@ function Home() {
          </div>
 
          {/* Widget Container */}
-         <div className=" border-[11px] border-secondary p-10 py-20 max-w-lg mx-auto text-center">
+         <div className=" border-[10px] border-secondary md:border-[11px] p-10 py-20 max-w-lg mx-auto text-center">
          {/* Top Icons (Solana + Token) */}
          <div className="flex justify-between mb-6">
             <img src="/img/widget/jupiter.svg" alt="Platform" className="w-10 h-10" />
@@ -358,7 +359,7 @@ function Home() {
          <Slider {...settings} className="">
             {portfolio.map((meme, index) => (
                <div key={index} className="p-4">
-               <div className="border-[11px] border-secondary  overflow-hidden p-10 lg:p-20">
+               <div className="border-[10px] border-secondary md:border-[11px] overflow-hidden p-10 lg:p-20">
                   <div className="p-2 text-left mb-6">
                      <h2 className="text-xl md:text-4xl font-bold">{meme.text}</h2>
                   </div>
