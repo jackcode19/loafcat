@@ -28,12 +28,12 @@ function Home() {
       {
          src: '/img/portfolio/porto1.png',
          alt: 'Meme 1',
-         text: 'GET BACK TO WORK',
+         text: 'Our Memes',
       },
       {
          src: '/img/portfolio/porto2.png',
          alt: 'Meme 1',
-         text: 'GET BACK TO WORK',
+         text: 'Our Memes',
       },
    ]; 
 
@@ -204,7 +204,7 @@ function Home() {
          {/* Address */}
          <div className="relative inline-block mb-12">
          <p 
-            className="text-md lg:text-lg text-secondary cursor-pointer hover:underline"
+            className="text-sm lg:text-lg text-secondary cursor-pointer hover:underline"
             onClick={handleCopy}
          >
             LoafdJ3iWSAvstx3zppSGKA6sRvL9GzRtU1iRV7HkLkm
@@ -234,13 +234,13 @@ function Home() {
          
          {/* Right Section - Token Details */}
          <div className="flex flex-col justify-center md:items-start text-left items-center md:w-2/3 md:pl-12 mt-6 md:mt-0">
-            <p className="text-lg lg:text-[39px]">
+            <p className="text-[24px] lg:text-[39px]">
                <span className="font-bold ">Taxes:</span> <span>0/0</span>
             </p>
-            <p className="text-lg lg:text-[39px] mt-10">
+            <p className="text-[24px] lg:text-[39px] mt-10">
                <span className="font-bold">Liquidity:</span> <span>Burnt</span>
             </p>
-            <p className="text-lg lg:text-[39px] mt-10">
+            <p className="text-[24px] lg:text-[39px] mt-10">
                <span className="font-bold">Mint & Freeze:</span> <span>Revoked</span>
             </p>
          </div>
